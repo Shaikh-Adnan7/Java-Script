@@ -17,8 +17,8 @@ const convertedNumber = Number(score)
 let num = "ads"
 
 let isloggesin = Boolean(num)
-console.log(typeof(isloggesin));
-console.log(isloggesin);
+// console.log(typeof(isloggesin));
+// console.log(isloggesin);
 
 // 1 => true; 0 => false
 // "" => false
