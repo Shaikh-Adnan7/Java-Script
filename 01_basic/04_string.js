@@ -23,3 +23,5 @@ console.log(url.replace("=", "-")); // Replacing the # fragment identifier with 
 
 
 console.log(gameCounter.split("#")); // Splitting the string into an array of substrings based on spaces
+
+
