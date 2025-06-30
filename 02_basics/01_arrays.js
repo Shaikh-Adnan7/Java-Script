@@ -27,3 +27,17 @@ console.log(myarray.includes(6)); // Outputs: false (6 is not in the array)
 const newArray = myarray.join(", "); // Joins elements into a string
 console.log(newArray); // Outputs: "1, 2, 3, 4
 //returns a string with all elements separated by ", "
+
+// Slice and Splice
+const slicedArray = myarray.slice(1, 4); // Slices elements from index 1 to 3 (4 is not included)
+console.log(slicedArray); // Outputs: [2, 3, 4]
+
+const splicedArray = myarray.splice(1, 2); // Removes 2 elements starting from index 1
+console.log(splicedArray); // Outputs: [2, 3] (removed elements)    
+
+console.log(myarray); // Outputs: [1, 4, 5] (remaining elements after splice)   
+
+
+// Slice returns a new array without modifying the original array.
+// Splice modifies the original array and returns the removed elements.
+
