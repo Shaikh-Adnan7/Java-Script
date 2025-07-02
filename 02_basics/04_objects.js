@@ -56,3 +56,20 @@ console.log(myArray); // Outputs: [[1, "one"], [2, "two"], [3, "three"], [4, "fo
 const myObject = Object.fromEntries(myArray);
 console.log(myObject); // Outputs: {1: "one", 2: "two", 3: "three", 4: "four", 5: "five", 6: "six"}
 // this method returns an object from an array of arrays, where each inner array contains the key and value of the object   
+
+
+
+// Object Destructuring
+const person = {
+    name:"Cr7",
+    age: "39",
+    address :"Lisbon",
+    club:"Al Nassr",
+    skills: ["Dribbling", "Shooting", "Heading"],
+}
+
+const {skills} = person;
+console.log(skills); // Outputs: ["Dribbling", "Shooting", "Heading"]
+// this is called object destructuring, where we can extract the properties of an object into variables
+
+
