@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asyncronus Js</title>
+</head>
+<body>
+    <h1 id="head">THE BEAST CODER</h1>
+    <button id="loadData">Load Data</button>
+</body>
+<script>
+
+//setTimeout is a built-in JavaScript function that lets you run some code after a delay (a waiting time).
+// Think of it like:
+// 👉 “Do this, but wait X milliseconds first.”
+
+    const saymyname = function () {
+        console.log("I am beast");
+    }
+    setTimeout(saymyname, 2000);
+
+    setTimeout(() => {
+        console.log("I am beast");
+                
+    }, 2000);
+        
+    const changetext = function () {
+        document.getElementById('head').innerHTML = 'The Beast Coders & Team';
+    }
+    const stopeme = setTimeout(changetext, 2000);
+
+// clearTimeout
+// clearTimeout() is the JavaScript function used to cancel a timeout that was created with setTimeout().
+// It requires the reference ID of the timeout to be canceled as an argument.
+
+document.getElementById('loadData').addEventListener('click', function(){
+    clearTimeout(stopeme);
+    console.log("You Clicked and cleared the timeout");
+})
+
+
+
+</script>
+</html>
