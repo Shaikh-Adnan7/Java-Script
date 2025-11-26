@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API REQUEST using XMLHttpRequest</title>
+</head>
+<body>
+    <h1>API Data</h1>
+    <pre id="output"></pre>
+</body>
+<script>
+    const url = 'https://jsonplaceholder.typicode.com/todos/1';
+    
+    const xhr = new XMLHttpRequest(); // Fixed typo
+    
+    xhr.open('GET', url); // Prepare GET request
+    
+    xhr.onload = function() { // Called when request completes
+        if (xhr.status === 200) { // 200 = OK
+            console.log(xhr.status)
+            const data = JSON.parse(xhr.responseText); // Parse JSON
+            console.log(data);
+           document.getElementById('output').innerHTML = JSON.stringify(data, null, 2);
+        } else {
+            console.error('Error fetching data', xhr.status);
+        }
+    };
+    
+    xhr.onerror = function() { // Handle network errors
+        console.error('Request failed');
+    };
+    
+    xhr.send(); // Send the request
+</script>
+</html>
