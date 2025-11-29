@@ -6,10 +6,11 @@ function UserName(name) {
 }
 
 function User(name, email, id) {
-  UserName.call(this, name);   // 
+  this.UserName()   // 
 
   this.email = email;
   this.id = id;
+
 }
 
 const user1 = new User("Ana", "ana@example.com", 101);
